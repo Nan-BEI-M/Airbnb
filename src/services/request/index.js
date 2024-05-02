@@ -23,4 +23,5 @@ class HYRequest {
         return this.instance.request({ ...config, method: "post" })
     }
 }
+// eslint-disable-next-line
 export default new HYRequest(BASE_URL, TIMEOUT)
