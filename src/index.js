@@ -4,7 +4,6 @@ import ReactDOM from 'react-dom/client';
 import { HashRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
-// import 'antd/dist/antd'
 // 自己创建内容引入
 import App from '@/App';
 import 'normalize.css'

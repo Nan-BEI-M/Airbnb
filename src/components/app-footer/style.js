@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 const FooterWrapper = styled.div`
     border-top: 1px solid #ddd;
     margin-top: 30px;

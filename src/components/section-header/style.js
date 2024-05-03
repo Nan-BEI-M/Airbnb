@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const HeaderWrapper = styled.div`
+margin-bottom: 10px;
     .title{
         margin-bottom: 20px;
     }

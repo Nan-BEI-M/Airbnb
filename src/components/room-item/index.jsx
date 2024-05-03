@@ -4,9 +4,9 @@ import ItemWrapper from './style'
 import { Rating } from '@mui/material'
 
 const RoomItem = memo((props) => {
-    const { itemData } = props
+    const { itemData, roomWidth } = props
     return (
-        <ItemWrapper $verifycolor={itemData?.verify_info?.text_color || "#39576a"}>
+        <ItemWrapper $roomWidth={roomWidth} $verifycolor={itemData?.verify_info?.text_color || "#39576a"}>
             <div className="inner" >
                 <div className="cover">
                     <img src={itemData.picture_url} alt="" />
@@ -31,6 +31,7 @@ const RoomItem = memo((props) => {
                         readOnly
                         style={{ fontSize: "14px", color: "#00848A" }}
                     />
+                    {/*  只有评分与content都存在才显示圆点 */}
                     <div>{itemData?.star_rating}</div>
                     {
                         itemData?.star_rating && itemData?.bottom_info?.content && <div> · </div>
