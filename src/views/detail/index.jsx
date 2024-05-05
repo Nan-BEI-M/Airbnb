@@ -1,9 +1,16 @@
-import React, { memo } from 'react'
 
-const Detail = memo(() => {
+import React, { memo } from 'react'
+import DetailWrapper from './style'
+import DetailPrcture from './c_cpns/detail-picture'
+
+const Detail = memo((props) => {
     return (
-        <div>Detail</div>
+        <DetailWrapper>
+            <DetailPrcture />
+        </DetailWrapper>
     )
 })
+
+
 
 export default Detail

@@ -29,8 +29,6 @@ const ScrollView = memo((props) => {
         // 判断右侧箭头隐藏
         setShowRight(offsetLeft < totalDistanceRef.current)
         setShowLeft(offsetLeft > 0)
-        console.log("offsetLeft", offsetLeft);
-        console.log("totalDistanceRef", totalDistanceRef.current);
     }
     return (
         <ScrollViewWrapper>

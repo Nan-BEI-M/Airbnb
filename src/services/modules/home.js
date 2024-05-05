@@ -25,3 +25,8 @@ export function fetchHomeLongforData() {
         url: "/home/longfor"
     })
 }
+export function fetchHomePlusData() {
+    return hyRequest.get({
+        url: "/home/plus"
+    })
+}

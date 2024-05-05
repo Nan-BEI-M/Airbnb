@@ -1,4 +1,4 @@
-import { fetchHomeDiscountData, fetchHomeGoodPriceData, fetchHomeHighScoreData, fetchHomeLongforData, fetchHomeRecommendData } from "@/services";
+import { fetchHomeDiscountData, fetchHomeGoodPriceData, fetchHomeHighScoreData, fetchHomeLongforData, fetchHomePlusData, fetchHomeRecommendData } from "@/services";
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 // redux发送异步网络请求
 // createAsyncThunk接受两个参数一个是名字，一个回调函数，
@@ -21,6 +21,9 @@ export const fetchHomeDataAction = createAsyncThunk(
         fetchHomeLongforData().then(res => {
             dispatch(changeLongforInfoAction(res))
         })
+        fetchHomePlusData().then(res => {
+            dispatch(changePlusInfoAction(res))
+        })
     })
 const homeSlice = createSlice({
     name: "home",
@@ -29,7 +32,8 @@ const homeSlice = createSlice({
         highScoreInfo: [],
         discountInfo: [],
         recommendInfo: [],
-        longforInfo: []
+        longforInfo: [],
+        plusInfo: []
     },
     reducers: {
         changeGoodPriceInfoAction(state, { payload }) {
@@ -46,6 +50,9 @@ const homeSlice = createSlice({
         },
         changeLongforInfoAction(state, { payload }) {
             state.longforInfo = payload
+        },
+        changePlusInfoAction(state, { payload }) {
+            state.plusInfo = payload
         }
 
     },
@@ -64,5 +71,6 @@ export const {
     changeHighScoreInfoAction,
     changeDiscountInfoAction,
     changeRecommendInfoAction,
-    changeLongforInfoAction } = homeSlice.actions
+    changeLongforInfoAction,
+    changePlusInfoAction } = homeSlice.actions
 export default homeSlice.reducer
