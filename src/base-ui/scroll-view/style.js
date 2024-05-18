@@ -14,7 +14,7 @@ const ScrollViewWrapper = styled.div`
     .control{
         display: flex;
         position: absolute;
-        z-index: 9;
+        z-index: 1;
         width: 24px;
         height: 24px;
         background-color: #fff;

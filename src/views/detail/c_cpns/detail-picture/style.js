@@ -1,18 +1,24 @@
 import styled from "styled-components";
 
 const PictureWrapper = styled.div`
+    position: relative;
+    /* position: absolute;
+    top: 48px; */
     .picture{
         display: flex;
         height: 600px;
         .left ,.right{
             width: 50%;
             height: 100%;
+            cursor: pointer;
             .item{
                 height: 100%;
                 img{
                 width: 100%;
                 height: 100%;
-                transition: transform 250ms ease;              
+                object-fit: cover;
+                transition: transform 250ms ease;   
+                
             }
             &:hover{
                 img{
@@ -55,6 +61,18 @@ const PictureWrapper = styled.div`
             .cover{
                 background: none;
             }
+        }
+        .show-btn{
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            padding: 6px 12px;
+            border: 1px solid black;
+            background-color: #fff;
+            font-weight: 600;
+            border-radius: 5px;
+            font-size: 15px;
+            cursor: pointer;
         }
     
 `

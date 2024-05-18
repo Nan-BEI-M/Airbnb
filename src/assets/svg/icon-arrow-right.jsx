@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import styleStrToObj from './utils'
 
 const IconArrowRight = memo((props) => {
-  const { width, height } = props
+  const { width = 12, height = 12 } = props
   return (
     <svg viewBox="0 0 18 18" role="img" aria-hidden="false" aria-label="next" focusable="false"
       style={styleStrToObj(`height: ${height}px; width: ${width}px; display: block; fill: currentcolor;`)}>

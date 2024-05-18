@@ -5,7 +5,7 @@ export const LeftWrapper = styled.div`
     display: flex;
     align-items: center;
     /* 使用回调函数 可以接受props参数 使用传递的主题样式 */
-    color: ${props => props.theme.color.primaryColor};
+    color: ${props => props.theme.isAlpha ? "#fff" : props.theme.color.primaryColor};
     /* 鼠标移动上 手指样式 */
     .logo{
         cursor: pointer;

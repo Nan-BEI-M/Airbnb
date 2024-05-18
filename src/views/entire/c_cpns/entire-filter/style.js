@@ -4,6 +4,7 @@ const FilterWrapper = styled.div`
     .filter{
         display: flex;
         padding: 10px 30px;
+        margin-top: 81px;
         .item{
             padding: 5px 10px;
             border: 1px solid #ddd;
